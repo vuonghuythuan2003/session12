@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function min(a, b, c) {
+            let min1 = a;
+
+            if (b < min1) {
+                min1 = b;
+            }
+
+            if (c < min1) {
+                min1 = c;
+            }
+
+            return min1;
+        }
+
+        let number1 = +prompt("Nhập vào số a:");
+        let number2 = +prompt("Nhập vào số b:");
+        let number3 = +prompt("Nhập vào số c:");
+
+        let minNumber = min(number1, number2, number3);
+
+        console.log(`Số nhỏ nhất là: ${minNumber}`);
+    </script>
+</body>
+</html>

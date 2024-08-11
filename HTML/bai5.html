@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tần suất ký tự</title>
+</head>
+<body>
+    <script>
+    function kiemTraTanSuat(chuoi) {
+        let ketQua = [];
+
+        for (let i = 0; i < chuoi.length; i++) {
+            let kyTu = chuoi[i];
+            let found = false;
+            for (let j = 0; j < ketQua.length; j++) {
+                if (ketQua[j][0] === kyTu) {
+                    ketQua[j][1]++;
+                    found = true; // kí tự đã được tìm thấy
+                    
+                    break;
+                }
+            }
+
+            if (!found) {
+                ketQua.push([kyTu, 1]);
+            }
+        }
+
+        console.log("Tần suất xuất hiện của từng ký tự:");
+        for (let i = 0; i < ketQua.length; i++) {
+            console.log(`'${ketQua[i][0]}': ${ketQua[i][1]}`);
+        }
+    }
+
+    let chuoiNguoiDungNhap = prompt("Nhập vào một chuỗi ký tự:");
+
+    kiemTraTanSuat(chuoiNguoiDungNhap);
+</script>
+
+</body>
+</html>
